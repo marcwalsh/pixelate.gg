@@ -1,0 +1,42 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 200%; /* Depending on your desired scroll length */
+}
+
+.background-layer img, .tv-layer img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.tv-layer img {
+    z-index: 2;
+}
+
+.gif-layer {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
+.gif-layer .gif {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust based on TV screen size */
+    height: auto; /* Adjust based on TV screen size */
+}
+
+.gif-layer .gif.active {
+    display: block;
+}
