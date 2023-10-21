@@ -31,10 +31,10 @@ body, html {
 .gif-layer .gif {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust based on TV screen size */
-    height: auto; /* Adjust based on TV screen size */
+    top: 420px;   /* Starting height of TV screen */
+    left: 1090px; /* Starting width of TV screen */
+    transform: scale(0.2233); /* Scaling based on the calculated factor */
+    transform-origin: top left;
 }
 
 .gif-layer .gif.active {
