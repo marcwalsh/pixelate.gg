@@ -35,8 +35,11 @@ body, html {
     transform: translate(-50%, -50%); /* Center the GIF */
 }
 
-.gif-layer .gif.active {
-    display: block;
+.gif-layer .gif {
+    display: none;
+    position: fixed;
+    object-fit: contain; 
+    /* We'll omit the max-width, max-height, top, left, and transform properties here as the exact dimensions and position will be set by the JavaScript */
 }
 
 /* TV Overlay Layer */

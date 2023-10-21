@@ -11,8 +11,8 @@ window.onload = function() {
         // Calculate the GIFs' position and dimensions
         const gifTopPosition = 420 * heightScaleFactor;
         const gifLeftPosition = 1090 * widthScaleFactor;
-        const gifWidth = 670 * widthScaleFactor;
-        const gifHeight = 600 * heightScaleFactor;
+        const gifWidth = 670 * widthScaleFactor;  // Width of the TV screen area (1760 - 1090)
+        const gifHeight = 600 * heightScaleFactor;  // Height of the TV screen area (1020 - 420)
 
         // Set GIFs' CSS properties based on calculations
         const gifs = document.querySelectorAll('.gif-layer .gif');
@@ -29,11 +29,6 @@ window.onload = function() {
 
     // Update GIF dimensions upon window resize
     window.addEventListener('resize', setGifDimensions);
-
-    // Check if the page isn't scrollable
-    if(document.body.clientHeight <= window.innerHeight) {
-        document.body.style.height = '200vh'; // Setting a dummy height for testing purposes
-    }
 
     // Handle scroll behavior to determine which GIF to show
     window.addEventListener('scroll', function() {
