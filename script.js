@@ -51,3 +51,30 @@ window.onload = function() {
         }
     });
 };
+
+function adjustAspectRatio() {
+    let viewportWidth = window.innerWidth;
+    let viewportHeight = window.innerHeight;
+
+    let backgroundImg = document.querySelector('.background-layer img');
+    let tvImg = document.querySelector('.tv-layer img');
+
+    if (viewportHeight > viewportWidth) {
+        // In portrait mode
+        backgroundImg.style.width = 'auto';
+        backgroundImg.style.height = '100%';
+
+        tvImg.style.width = 'auto';
+        tvImg.style.height = '100%';
+    } else {
+        // In landscape mode
+        backgroundImg.style.width = '100%';
+        backgroundImg.style.height = '100%';
+
+        tvImg.style.width = '100%';
+        tvImg.style.height = '100%';
+    }
+}
+
+window.addEventListener('resize', adjustAspectRatio);
+document.addEventListener('DOMContentLoaded', adjustAspectRatio);
