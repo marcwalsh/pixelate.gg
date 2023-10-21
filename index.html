@@ -2,31 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layered GIF Display</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Responsive Layered Design</title>
 </head>
 <body>
 
-<!-- Background Layer -->
-<div class="background-layer">
-    <img src="background-image.jpg" alt="Background">
-</div>
+<div class="aspect-ratio-box">
+    <!-- Background Layer -->
+    <div class="background-layer">
+        <img src="background-image.jpg" alt="Background">
+    </div>
 
-<!-- GIF Layer -->
-<div class="gif-layer">
-    <img src="gif1.gif" class="gif active" alt="GIF 1">
-    <img src="gif2.gif" class="gif" alt="GIF 2">
-</div>
+    <!-- GIF Layer -->
+    <div class="gif-layer">
+        <img src="gif1.gif" class="gif active" alt="GIF 1">
+        <img src="gif2.gif" class="gif" alt="GIF 2">
+    </div>
 
-<!-- TV Overlay Layer -->
-<div class="tv-layer">
-    <img src="tv-overlay.png" alt="TV Overlay">
+    <!-- TV Overlay Layer -->
+    <div class="tv-layer">
+        <img src="tv-overlay.png" alt="TV Overlay">
+    </div>
 </div>
-
-<!-- Dummy content for scrolling; remove or replace with real content as necessary -->
-<div style="height: 200vh;"></div>
 
 <script src="script.js"></script>
 </body>
