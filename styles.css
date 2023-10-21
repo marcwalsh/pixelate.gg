@@ -10,17 +10,18 @@ body, html {
 /* Background Layer */
 .background-layer img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;  /* Background should be the lowest layer */
+    z-index: 1;
 }
 
 /* GIF Layer */
 .gif-layer {
     position: relative;
-    z-index: 2;  /* GIFs above background but below TV */
+    z-index: 2;
 }
 
 .gif-layer .gif {
@@ -28,7 +29,7 @@ body, html {
     position: fixed;
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* Ensures GIF maintains aspect ratio */
+    object-fit: cover;
 }
 
 .gif-layer .gif.active {
@@ -38,9 +39,10 @@ body, html {
 /* TV Overlay Layer */
 .tv-layer img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;  /* TV overlay should be the topmost layer */
+    z-index: 3;
 }
