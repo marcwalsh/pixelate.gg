@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
     // Function to set GIFs' positions and sizes
     const setGifDimensions = () => {
         // Calculate scale factors based on the rendered image size
@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update GIF dimensions upon window resize
     window.addEventListener('resize', setGifDimensions);
 
+    // Check if the page isn't scrollable
+    if(document.body.clientHeight <= window.innerHeight) {
+        document.body.style.height = '200vh'; // Setting a dummy height for testing purposes
+    }
+
     // Handle scroll behavior to determine which GIF to show
     window.addEventListener('scroll', function() {
         const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
@@ -45,4 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
             gifs[1].classList.add('active');
         }
     });
-});
+};
