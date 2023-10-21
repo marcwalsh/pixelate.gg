@@ -1,31 +1,25 @@
+/* General styling */
 body, html {
-    height: 100%;
     margin: 0;
-    overflow: hidden;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;  /* Consider whether you want this depending on your content */
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    height: 200%; /* Depending on your desired scroll length */
-}
-
-.background-layer img, .tv-layer img {
+/* Background Layer */
+.background-layer img {
     width: 100%;
     height: auto;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;  /* Background should be the lowest layer */
 }
 
-.tv-layer img {
-    z-index: 2;
-}
-
+/* GIF Layer */
 .gif-layer {
     position: relative;
-    height: 100%;
-    z-index: 1;
+    z-index: 2;  /* GIFs above background but below TV */
 }
 
 .gif-layer .gif {
@@ -35,4 +29,14 @@ body, html {
 
 .gif-layer .gif.active {
     display: block;
+}
+
+/* TV Overlay Layer */
+.tv-layer img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;  /* TV overlay should be the topmost layer */
 }
